@@ -28,7 +28,7 @@ docker build --tag yolox .
 If you don't have the COCO dataset (val set is enough), then you need to run the container using
 
 ```Shell
-docker run --gpus all -it -v /path/to/YOLOX:/app/YOLOX -p 8888:8888 yolox
+docker run --gpus all -it -v /path/to/YOLOX:/app/YOLOX yolox
 cd YOLOX
 ```
 and download the dataset by running the following bash script inside the container
@@ -40,7 +40,7 @@ and download the dataset by running the following bash script inside the contain
 If you already have the dataset locally you can mount its path while running the container
 
 ```Shell
-docker run --gpus all -it -v /path/to/YOLOX:/app/YOLOX -v /path/to/datasets:/app/YOLOX/datasets -p 8888:8888 yolox
+docker run --gpus all -it -v /path/to/YOLOX:/app/YOLOX -v /path/to/datasets:/app/YOLOX/datasets yolox
 cd YOLOX
 ```
 The folder structure should be like:
